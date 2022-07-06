@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BASE_URL } from "./Constants";
+import { ContextWebInfo } from "./contexts/context";
+import Catalog from "./pages/catalog/Catalog";
+import Contact from "./pages/contact/Contact";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
 
 function App() {
+  const [webInfo, setWebInfo] = useState(null)
+
+  const getWebInfo = async () => {
+    try {
+      const responseJson = await axios.get(`${BASE_URL}/web-info`)
+      
+      setWebInfo(responseJson.data.result)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getWebInfo()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextWebInfo.Provider value={{ webInfo }}>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </ContextWebInfo.Provider>
   );
 }
 

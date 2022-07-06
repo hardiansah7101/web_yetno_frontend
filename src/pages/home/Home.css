@@ -1,0 +1,14 @@
+.carousel-item{
+    height: 550px;
+}
+.carousel-item img{
+    margin-top: -170px;
+}
+.row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.card {
+    margin-right: 25px;
+}

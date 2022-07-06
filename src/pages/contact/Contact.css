@@ -1,0 +1,98 @@
+#ContactForm1,
+#comments {
+  display: none
+}
+
+#ContactForm1_contact-form-name,
+#ContactForm1_contact-form-email {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  padding: 14px;
+  background: #fff;
+  color: #222;
+  border: 1px solid rgba(0, 0, 0, 0.08)
+}
+
+#ContactForm1_contact-form-email-message {
+  font-family: 'Roboto';
+  width: 100%;
+  height: 250px;
+  margin: 10px auto;
+  padding: 14px;
+  background: #fff;
+  color: #222;
+  border: 1px solid rgba(0, 0, 0, 0.08)
+}
+
+#ContactForm1_contact-form-name:focus,
+#ContactForm1_contact-form-email:focus,
+#ContactForm1_contact-form-email-message:focus {
+  background: #fff;
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.18)
+}
+
+#ContactForm1_contact-form-submit {
+  background: #232531;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  width: 161px;
+  height: 45px;
+  float: left;
+  margin: 10px 0 3px 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 24px;
+}
+
+.formcolumn4 {
+  position: relative
+}
+
+#ContactForm1_contact-form-submit:hover {
+  background: #00c9ff;
+  transition: all .3s ease;
+}
+
+#ContactForm1_contact-form-error-message,
+#ContactForm1_contact-form-success-message {
+  margin-top: 35px
+}
+
+form {
+  color: #888
+}
+
+.formcolumn1,
+.formcolumn2 {
+  float: left;
+  width: 50%
+}
+
+.formcolumn1,
+.formcolumn2 {
+  margin: 0 0 10px 0;
+  padding: 0 10px 0 0
+}
+
+.formcolumn2 {
+  padding: 0 0 0 10px
+}
+
+.quickedit,
+#ContactForm1,
+#ContactForm1 br {
+  display: none
+}
+
+@media only screen and (max-width:768px) {
+
+  .formcolumn1,
+  .formcolumn2 {
+    width: 100%;
+    padding: 0
+  }
+}

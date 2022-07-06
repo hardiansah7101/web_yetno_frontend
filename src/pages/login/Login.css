@@ -1,0 +1,13 @@
+body{
+    background-size: cover;
+}
+.container{
+    width: 30%;
+    margin-top: 10%;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+    padding: 40px;
+    background-color: ivory;
+}
+.btn{
+    margin-top: 10px;
+}
