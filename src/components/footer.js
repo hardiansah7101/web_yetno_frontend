@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ContextWebInfo } from "../contexts/context";
 
 export default function Footer() {
@@ -22,10 +23,10 @@ export default function Footer() {
         <div className="footer_width link">
           <h2>Quick Link</h2>
           <ul>
-            <li><a href="zuka footer/aboutus.html">About Us</a></li>
-            <li><a href="zuka footer/Term & Condition.html">Terms of Service</a></li>
-            <li><a href="zuka footer/Privacy Policy.html">Privacy Policy</a></li>
-            <li><a href="zuka footer/faq.html">FAQ</a></li>
+            <li><Link to={'/about'}>About Us</Link></li>
+            <li><Link to={'/tos'}>Terms of Service</Link></li>
+            <li><Link to={'/privacy'}>Privacy Policy</Link></li>
+            <li><Link to={'/faq'}>FAQ</Link></li>
           </ul>
         </div>
         <div className="footer_width contact">
